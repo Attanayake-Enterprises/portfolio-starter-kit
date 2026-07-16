@@ -4,11 +4,11 @@ const navItems = {
   '/': {
     name: 'home',
   },
-  '/blog': {
-    name: 'blog',
+  '/gallery': {
+    name: 'gallery',
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
+  '/#contact': {
+    name: 'contact',
   },
 }
 
@@ -16,6 +16,14 @@ export function Navbar() {
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="text-sm font-medium tracking-tight hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+          >
+            Attanayake Enterprises
+          </Link>
+        </div>
         <nav
           className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"

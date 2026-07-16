@@ -1,17 +1,17 @@
-import { getBlogPosts } from 'app/blog/utils'
+import { galleryCategories } from 'app/data/company'
 
-export const baseUrl = 'https://portfolio-blog-starter.vercel.app'
+export const baseUrl = 'https://attanayake-enterprises.vercel.app'
 
 export default async function sitemap() {
-  let blogs = getBlogPosts().map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
+  const categoryRoutes = Object.keys(galleryCategories).map((slug) => ({
+    url: `${baseUrl}/gallery/${slug}`,
+    lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  let routes = ['', '/blog'].map((route) => ({
+  const routes = ['', '/gallery'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
   }))
 
-  return [...routes, ...blogs]
+  return [...routes, ...categoryRoutes]
 }

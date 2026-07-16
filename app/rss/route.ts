@@ -1,25 +1,15 @@
 import { baseUrl } from 'app/sitemap'
-import { getBlogPosts } from 'app/blog/utils'
+import { company, galleryCategories } from 'app/data/company'
 
 export async function GET() {
-  let allBlogs = await getBlogPosts()
-
-  const itemsXml = allBlogs
-    .sort((a, b) => {
-      if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
-        return -1
-      }
-      return 1
-    })
+  const itemsXml = Object.entries(galleryCategories)
     .map(
-      (post) =>
+      ([slug, category]) =>
         `<item>
-          <title>${post.metadata.title}</title>
-          <link>${baseUrl}/blog/${post.slug}</link>
-          <description>${post.metadata.summary || ''}</description>
-          <pubDate>${new Date(
-            post.metadata.publishedAt
-          ).toUTCString()}</pubDate>
+          <title>${category.title}</title>
+          <link>${baseUrl}/gallery/${slug}</link>
+          <description>${category.description}</description>
+          <pubDate>${new Date().toUTCString()}</pubDate>
         </item>`
     )
     .join('\n')
@@ -27,9 +17,9 @@ export async function GET() {
   const rssFeed = `<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0">
     <channel>
-        <title>My Portfolio</title>
+        <title>${company.name}</title>
         <link>${baseUrl}</link>
-        <description>This is my portfolio RSS feed</description>
+        <description>${company.tagline}</description>
         ${itemsXml}
     </channel>
   </rss>`

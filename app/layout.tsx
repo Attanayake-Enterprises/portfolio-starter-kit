@@ -7,21 +7,30 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
+import { company } from './data/company'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: company.name,
+    template: `%s | ${company.name}`,
   },
-  description: 'This is my portfolio.',
+  description: company.description,
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: company.name,
+    description: company.tagline,
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: company.name,
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/ae-20.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Attanayake Enterprises industrial machinery components',
+      },
+    ],
   },
   robots: {
     index: true,
@@ -52,7 +61,7 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
+      <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}
