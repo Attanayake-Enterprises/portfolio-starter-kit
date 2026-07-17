@@ -24,13 +24,13 @@ export function GalleryGrid({
     <div
       className={
         columns === 3
-          ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'
-          : 'grid grid-cols-1 sm:grid-cols-2 gap-4'
+          ? 'grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'
+          : 'grid grid-cols-1 gap-3 sm:grid-cols-2'
       }
     >
       {items.map((item) => (
-        <figure key={item.src} className="group">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900">
+        <figure key={item.src} className="group border border-black/10 bg-white">
+          <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
             <Image
               src={item.src}
               alt={item.alt}
@@ -40,7 +40,7 @@ export function GalleryGrid({
             />
           </div>
           {item.caption && (
-            <figcaption className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+            <figcaption className="border-t border-black/10 px-3 py-2 text-sm text-neutral-600">
               {item.caption}
             </figcaption>
           )}

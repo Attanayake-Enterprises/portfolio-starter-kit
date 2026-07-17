@@ -40,21 +40,22 @@ export default async function Page({ params }: PageProps) {
   const items = galleryItems.filter((item) => item.category === slug)
 
   return (
-    <section>
-      <Link
-        href="/gallery"
-        className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors mb-6 inline-block"
-      >
-        ← Back to gallery
-      </Link>
-      <h1 className="font-semibold text-2xl mb-2 tracking-tighter">
-        {category.title}
-      </h1>
-      <p className="mb-8 text-neutral-600 dark:text-neutral-400 text-sm">
-        {category.description}
-      </p>
-      <GalleryGrid category={slug as GalleryCategory} />
-      <p className="mt-8 text-sm text-neutral-500">
+    <section className="space-y-6">
+      <div className="section-card">
+        <Link href="/gallery" className="mb-4 inline-block text-sm uppercase tracking-[0.18em] text-black hover:text-neutral-600">
+          ← Back to gallery
+        </Link>
+        <h1 className="mb-2 text-2xl font-semibold uppercase tracking-[0.16em] text-black">
+          {category.title}
+        </h1>
+        <p className="text-sm leading-6 text-neutral-600">{category.description}</p>
+      </div>
+
+      <div className="section-card">
+        <GalleryGrid category={slug as GalleryCategory} />
+      </div>
+
+      <p className="text-sm text-neutral-600">
         {items.length} {items.length === 1 ? 'photo' : 'photos'}
       </p>
     </section>
