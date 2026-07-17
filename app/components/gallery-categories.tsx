@@ -17,7 +17,7 @@ export function GalleryCategories() {
         const count = galleryItems.filter((item) => item.category === slug).length
 
         return (
-          <Link key={slug} href={`/gallery/${slug}`} className="block border border-black/10 bg-neutral-50 p-4 transition-colors hover:bg-white">
+          <Link key={slug} href={`/gallery/${slug}`} className="block border border-black/15 bg-white p-4 transition-colors hover:bg-black hover:text-white">
             <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
               <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-black">
                 {title}

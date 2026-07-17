@@ -29,7 +29,7 @@ export function GalleryGrid({
       }
     >
       {items.map((item) => (
-        <figure key={item.src} className="group border border-black/10 bg-white">
+        <figure key={item.src} className="group border border-black/15 bg-white">
           <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
             <Image
               src={item.src}
@@ -40,7 +40,7 @@ export function GalleryGrid({
             />
           </div>
           {item.caption && (
-            <figcaption className="border-t border-black/10 px-3 py-2 text-sm text-neutral-600">
+            <figcaption className="border-t border-black/15 px-3 py-2 text-sm text-neutral-600">
               {item.caption}
             </figcaption>
           )}

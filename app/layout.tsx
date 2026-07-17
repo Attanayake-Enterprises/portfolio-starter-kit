@@ -61,8 +61,8 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased mx-3 mt-4 max-w-5xl py-2 sm:mx-4 lg:mx-auto lg:mt-6">
-        <main className="mt-2 flex min-w-0 flex-col px-1 sm:px-0">
+      <body className="antialiased mx-3 mt-4 max-w-6xl py-2 sm:mx-4 lg:mx-auto lg:mt-6">
+        <main className="mx-auto mt-2 flex min-w-0 w-full max-w-4xl flex-col px-1 sm:px-0">
           <Navbar />
           {children}
           <Footer />

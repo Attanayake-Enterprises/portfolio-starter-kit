@@ -20,7 +20,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="border border-black/10 bg-neutral-100 p-4 sm:min-w-[260px]">
+          <div className="border border-black/15 bg-white p-4 sm:min-w-[260px]">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center border border-black/10 bg-white p-2">
                 <Image src="/logo.svg" alt="Attanayake Enterprises logo" width={28} height={28} />
@@ -39,7 +39,7 @@ export default function Page() {
       </section>
 
       <section className="section-card section-card--tight">
-        <div className="relative aspect-[16/9] overflow-hidden border border-black/10 bg-neutral-100">
+        <div className="relative aspect-[16/9] overflow-hidden border border-black/15 bg-neutral-100">
           <Image
             src="/images/ae-20.jpeg"
             alt="Twin-shaft mixer interior showcasing Attanayake Enterprises plant wear parts"
@@ -68,7 +68,7 @@ export default function Page() {
         </h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {company.services.map((service) => (
-            <div key={service.title} className="border border-black/10 bg-neutral-50 p-4">
+            <div key={service.title} className="border border-black/15 bg-white p-4">
               <h3 className="font-medium uppercase tracking-[0.14em] text-black">
                 {service.title}
               </h3>

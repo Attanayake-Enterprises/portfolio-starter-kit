@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section className="space-y-8">
+    <section className="mx-auto w-full max-w-3xl space-y-8">
       <div className="section-card">
         <h1 className="mb-2 text-2xl font-semibold uppercase tracking-[0.16em] text-black">
           Gallery

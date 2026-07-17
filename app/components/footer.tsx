@@ -10,7 +10,7 @@ function ArrowIcon() {
 
 export default function Footer() {
   return (
-    <footer className="mt-8 border-t border-black/10 pt-6 sm:mt-10">
+    <footer className="mt-8 border-t border-black/15 pt-6 sm:mt-10">
       <ul className="flex flex-col gap-2 text-sm text-black sm:flex-row sm:flex-wrap sm:gap-4">
         <li>
           <a className="flex items-center gap-2 hover:text-neutral-600" href={`tel:${company.contact.proprietorPhone.replace(/\s/g, '')}`}>

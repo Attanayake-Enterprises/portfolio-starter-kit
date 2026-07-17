@@ -15,10 +15,10 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <aside className="mb-8 border-b border-black/10 py-4 sm:mb-10 lg:mb-12">
+    <aside className="mb-8 border-b border-black/15 py-4 sm:mb-10 lg:mb-12">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <Link href="/" className="flex items-center gap-3 self-start">
-          <div className="flex h-11 w-11 items-center justify-center border border-black/10 bg-white p-2">
+          <div className="flex h-11 w-11 items-center justify-center border border-black/15 bg-white p-2">
             <Image src="/logo.svg" alt="Attanayake Enterprises logo" width={24} height={24} priority />
           </div>
           <div className="leading-tight">
@@ -36,7 +36,7 @@ export function Navbar() {
             <Link
               key={path}
               href={path}
-              className="border border-black/10 bg-white px-3 py-1.5 text-sm uppercase tracking-[0.18em] text-black transition-colors hover:bg-black hover:text-white"
+              className="border border-black/15 bg-white px-3 py-1.5 text-sm uppercase tracking-[0.18em] text-black transition-colors hover:bg-black hover:text-white"
             >
               {name}
             </Link>

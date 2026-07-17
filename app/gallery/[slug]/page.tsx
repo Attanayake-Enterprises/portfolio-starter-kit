@@ -40,7 +40,7 @@ export default async function Page({ params }: PageProps) {
   const items = galleryItems.filter((item) => item.category === slug)
 
   return (
-    <section className="space-y-6">
+    <section className="mx-auto w-full max-w-3xl space-y-6">
       <div className="section-card">
         <Link href="/gallery" className="mb-4 inline-block text-sm uppercase tracking-[0.18em] text-black hover:text-neutral-600">
           ← Back to gallery
