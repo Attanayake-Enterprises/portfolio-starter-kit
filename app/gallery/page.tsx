@@ -4,19 +4,19 @@ import { GalleryGrid } from 'app/components/gallery-grid'
 import { company } from 'app/data/company'
 
 export const metadata = {
-  title: 'Gallery',
-  description: `Product gallery and project showcase for ${company.name}.`,
+  title: 'Plant Parts & Custom Fabrication Gallery',
+  description: `Batching plant, asphalt plant, crusher parts and custom metal fabrication work by ${company.name} in Sri Lanka.`,
 }
 
 export default function Page() {
   return (
-    <section className="mx-auto w-full max-w-3xl space-y-8">
+    <section className="w-full space-y-4 sm:space-y-5 lg:space-y-6">
       <div className="section-card">
         <h1 className="mb-2 text-2xl font-semibold uppercase tracking-[0.16em] text-black">
           Gallery
         </h1>
         <p className="text-sm leading-6 text-neutral-600">
-          Below are some images of our work — spare parts, wear components, and industrial fabrication from our factory in Kelaniya.
+          Plant spare parts, wear components, gearbox repairs and custom metal fabrication from our factory in Kelaniya, Sri Lanka.
         </p>
       </div>
 

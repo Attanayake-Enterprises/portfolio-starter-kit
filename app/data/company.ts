@@ -2,23 +2,23 @@ export const company = {
   name: 'Attanayake Enterprises',
   shortName: 'AE',
   proprietor: 'A.S. Attanayake',
-  tagline: 'Finished Metal Products for Machinery',
+  tagline: 'Plant Wear Parts & Custom Metal Fabrication in Sri Lanka',
   description:
-    'We are pioneers in producing finished metal products for machinery. Our work has been notable in the construction industry as we have been the leading supplier of spare and wear parts for batching plants, asphalt plants, and crushers in top companies in Sri Lanka.',
+    'Sri Lankan manufacturers of batching plant, asphalt plant and crusher spare parts, with custom metal fabrication, cast iron components and gearbox repair services from Kelaniya.',
   about: [
-    'We are pioneers in producing finished metal products for machinery. Our work has been notable in the construction industry as we have been the leading supplier of spare and wear parts for batching plants, asphalt plants, and crushers in top companies in Sri Lanka.',
-    'We provide finished metal products to fit your requirement regardless of the industry. Furthermore, we provide installation and maintenance for our products.',
+    'Attanayake Enterprises is a Sri Lankan manufacturer focused on the hard-working parts inside batching plants, asphalt plants and crusher plants. From our Kelaniya workshop, we make spare and wear parts for the construction and materials-handling industries.',
+    'Alongside plant parts, we take on custom metal fabrication, cast iron fabrication, repair and installation work. Bring us a drawing, a worn sample or a practical requirement and we will help turn it into a durable finished component.',
   ],
   services: [
     {
-      title: 'Custom Metal Products',
+      title: 'Custom Metal Fabrication',
       description:
         'Manufacture custom-made, finished metal products to fit your requirement — regardless of industry.',
     },
     {
       title: 'Mixer & Plant Wear Parts',
       description:
-        'Manufacture mixing arms, mixing tips, scraper blades, wall plates, and other wear parts for batching and asphalt plants.',
+        'Manufacture mixing arms, mixing blades, bottom plates, wear plates, scraper blades and wall plates for batching and asphalt plants.',
     },
     {
       title: 'Assembly, Installation & Repair',
@@ -43,16 +43,18 @@ export const company = {
     {
       title: 'Plant & Crusher Spare Parts',
       description:
-        'Manufacturing spare parts for batching plants, asphalt plants, crushers, and many other types of machinery.',
+        'Manufacturing batching plant, asphalt plant and crusher spare parts for Sri Lankan construction and aggregate operations.',
     },
   ],
   capabilities: [
     'Custom-made finished metal products',
-    'Mixing arms, tips, scraper blades & wall plates',
+    'Mixing arms, mixing blades, bottom plates & wear plates',
     'Batching plant spare & wear parts',
     'Asphalt plant spare & wear parts',
     'Crusher spare & wear parts',
-    'Gearbox repairs & overhaul',
+    'Batching plant gearbox repairs & overhaul',
+    'Wear-part manufacturing for large mixing machines',
+    'Custom metal and cast iron fabrication',
     'Metal structure construction (silos)',
     'Assembly, installation & maintenance',
   ],
@@ -92,12 +94,12 @@ export const galleryCategories: Record<
   { title: string; description: string }
 > = {
   'mixer-parts': {
-    title: 'Batching & Asphalt Plant Parts',
+    title: 'Batching & Asphalt Plant Spare Parts',
     description:
-      'Mixing arms, mixing tips, scraper blades, wall plates, and wear parts for batching and asphalt plants.',
+      'Mixing arms, mixing blades, bottom plates, scraper blades, wall plates, and wear parts for batching and asphalt plants in Sri Lanka.',
   },
   'crusher-parts': {
-    title: 'Crusher Wear Parts',
+    title: 'Crusher Spare & Wear Parts',
     description:
       'Concaves, mantles, and crushing chamber components for crusher machinery.',
   },

@@ -16,9 +16,27 @@ export const metadata: Metadata = {
     template: `%s | ${company.name}`,
   },
   description: company.description,
+  keywords: [
+    'batching plant spare parts Sri Lanka',
+    'asphalt plant spare parts Sri Lanka',
+    'crusher spare parts Sri Lanka',
+    'concrete mixer spare parts Sri Lanka',
+    'mixing arms',
+    'mixing blades',
+    'bottom plates',
+    'wear plates',
+    'batching plant gearbox repairs',
+    'custom metal fabrication Sri Lanka',
+    'cast iron fabrication',
+  ],
+  alternates: { canonical: '/' },
+  icons: {
+    icon: [{ url: '/logo.svg', type: 'image/svg+xml' }],
+    shortcut: '/logo.svg',
+  },
   openGraph: {
     title: company.name,
-    description: company.tagline,
+    description: company.description,
     url: baseUrl,
     siteName: company.name,
     locale: 'en_US',
@@ -61,8 +79,37 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased mx-3 mt-4 max-w-6xl py-2 sm:mx-4 lg:mx-auto lg:mt-6">
-        <main className="mx-auto mt-2 flex min-w-0 w-full max-w-4xl flex-col px-1 sm:px-0">
+      <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: company.name,
+              description: company.description,
+              url: baseUrl,
+              logo: `${baseUrl}/logo.svg`,
+              email: company.contact.email,
+              telephone: company.contact.proprietorPhone,
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: company.contact.office.address,
+                addressLocality: 'Kelaniya',
+                addressCountry: 'LK',
+              },
+              areaServed: 'Sri Lanka',
+              knowsAbout: [
+                'Batching plant spare parts',
+                'Asphalt plant spare parts',
+                'Crusher spare parts',
+                'Custom metal fabrication',
+                'Gearbox repair',
+              ],
+            }),
+          }}
+        />
+        <main className="site-shell flex min-w-0 w-full flex-col">
           <Navbar />
           {children}
           <Footer />

@@ -2,6 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const navItems = {
+  '/plant-spare-parts': {
+    name: 'Batching Plant, Mixing and Asphalt Plant Spare Parts',
+  },
+  '/custom-fabrication': {
+    name: 'fabrication',
+  },
   '/': {
     name: 'home',
   },
@@ -15,28 +21,28 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <aside className="mb-8 border-b border-black/15 py-4 sm:mb-10 lg:mb-12">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <Link href="/" className="flex items-center gap-3 self-start">
-          <div className="flex h-11 w-11 items-center justify-center border border-black/15 bg-white p-2">
+    <aside className="site-header mb-7 px-4 py-4 sm:mb-9 sm:px-5 lg:mb-11 lg:px-6">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <Link href="/" className="flex min-w-0 items-center gap-3 self-start">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-white p-2 sm:h-11 sm:w-11">
             <Image src="/logo.svg" alt="Attanayake Enterprises logo" width={24} height={24} priority />
           </div>
-          <div className="leading-tight">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-black">
+          <div className="min-w-0 leading-tight">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white sm:text-sm sm:tracking-[0.2em]">
               Attanayake Enterprises
             </p>
-            <p className="text-[11px] uppercase tracking-[0.24em] text-neutral-600">
+            <p className="mt-1 text-[10px] uppercase tracking-[0.16em] text-white/80 sm:text-[11px] sm:tracking-[0.24em]">
               precision metal solutions
             </p>
           </div>
         </Link>
 
-        <nav className="flex flex-wrap items-center gap-2" id="nav">
+        <nav className="grid w-full grid-cols-2 gap-2 sm:w-auto sm:flex sm:flex-wrap sm:justify-end" id="nav" aria-label="Primary navigation">
           {Object.entries(navItems).map(([path, { name }]) => (
             <Link
               key={path}
               href={path}
-              className="border border-black/15 bg-white px-3 py-1.5 text-sm uppercase tracking-[0.18em] text-black transition-colors hover:bg-black hover:text-white"
+              className="border border-white/35 px-2 py-2 text-center text-[11px] uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black focus-visible:bg-white focus-visible:text-black sm:px-3 sm:text-sm sm:tracking-[0.18em]"
             >
               {name}
             </Link>

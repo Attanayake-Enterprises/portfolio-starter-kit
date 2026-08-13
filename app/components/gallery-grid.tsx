@@ -24,8 +24,8 @@ export function GalleryGrid({
     <div
       className={
         columns === 3
-          ? 'grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'
-          : 'grid grid-cols-1 gap-3 sm:grid-cols-2'
+          ? 'grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3'
+          : 'grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'
       }
     >
       {items.map((item) => (
