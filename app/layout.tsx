@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     template: `%s | ${company.name}`,
   },
   description: company.description,
+  icons: {
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
+  },
   openGraph: {
     title: company.name,
     description: company.tagline,
@@ -61,8 +66,8 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased mx-3 mt-4 max-w-6xl py-2 sm:mx-4 lg:mx-auto lg:mt-6">
-        <main className="mx-auto mt-2 flex min-w-0 w-full max-w-4xl flex-col px-1 sm:px-0">
+      <body className="antialiased">
+        <main className="site-shell flex min-w-0 w-full flex-col">
           <Navbar />
           {children}
           <Footer />

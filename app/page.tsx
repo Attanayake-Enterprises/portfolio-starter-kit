@@ -5,9 +5,9 @@ import { company, featuredGallerySlugs, galleryCategories } from 'app/data/compa
 
 export default function Page() {
   return (
-    <div className="space-y-4 sm:space-y-5">
+    <div className="space-y-4 sm:space-y-5 lg:space-y-6">
       <section className="section-card">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.42fr)] lg:items-end">
           <div className="max-w-2xl">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-neutral-600">
               {company.tagline}
@@ -20,7 +20,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="border border-black/15 bg-white p-4 sm:min-w-[260px]">
+          <div className="border border-black/15 bg-white p-4 lg:justify-self-end">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center border border-black/10 bg-white p-2">
                 <Image src="/logo.svg" alt="Attanayake Enterprises logo" width={28} height={28} />
@@ -39,7 +39,7 @@ export default function Page() {
       </section>
 
       <section className="section-card section-card--tight">
-        <div className="relative aspect-[16/9] overflow-hidden border border-black/15 bg-neutral-100">
+        <div className="relative aspect-[16/9] overflow-hidden border border-black/15 bg-neutral-100 lg:aspect-[21/8]">
           <Image
             src="/images/ae-20.jpeg"
             alt="Twin-shaft mixer interior showcasing Attanayake Enterprises plant wear parts"
@@ -66,7 +66,7 @@ export default function Page() {
         <h2 className="mb-5 text-xl font-semibold uppercase tracking-[0.16em] text-black">
           What We Do
         </h2>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {company.services.map((service) => (
             <div key={service.title} className="border border-black/15 bg-white p-4">
               <h3 className="font-medium uppercase tracking-[0.14em] text-black">
