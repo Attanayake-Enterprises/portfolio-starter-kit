@@ -37,12 +37,16 @@ export function Navbar() {
           </div>
         </Link>
 
-        <nav className="grid w-full grid-cols-2 gap-2 sm:w-auto sm:flex sm:flex-wrap sm:justify-end" id="nav" aria-label="Primary navigation">
+        <nav
+          className="grid w-full grid-cols-2 gap-2 sm:w-auto sm:flex sm:flex-wrap sm:items-stretch sm:justify-end"
+          id="nav"
+          aria-label="Primary navigation"
+        >
           {Object.entries(navItems).map(([path, { name }]) => (
             <Link
               key={path}
               href={path}
-              className="border border-white/35 px-2 py-2 text-center text-[11px] uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black focus-visible:bg-white focus-visible:text-black sm:px-3 sm:text-sm sm:tracking-[0.18em]"
+              className="flex min-h-11 items-center justify-center border border-white/35 px-3 py-2.5 text-center text-[11px] uppercase leading-snug tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black focus-visible:bg-white focus-visible:text-black first:col-span-2 sm:min-h-0 sm:px-3 sm:py-2 sm:text-sm sm:tracking-[0.18em] sm:first:col-auto"
             >
               {name}
             </Link>
